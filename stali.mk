@@ -6,7 +6,7 @@ all:
 	@$(MAKE) || exit
 	@echo done
 
-install:
+install: all
 	@mkdir -p $(DESTDIR)/boot
 	@cp arch/x86_64/boot/bzImage $(DESTDIR)/boot/vmlinuz
 	@cp System.map $(DESTDIR)/boot/
